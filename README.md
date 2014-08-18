@@ -1,0 +1,4 @@
+10PotWaage
+==========
+
+Potenzialwaage
