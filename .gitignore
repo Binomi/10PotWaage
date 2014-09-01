@@ -1,0 +1,11 @@
+*.aux
+
+*.gz
+
+*.toc
+
+*.synctx.gz
+
+*.tex.bak
+
+Protokoll10.log
