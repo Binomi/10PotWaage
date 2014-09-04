@@ -180,6 +180,27 @@ Praktikant:
 
 \section{Theorie}
 \label{sec:theorie}
+Die Kapazität eines Plattenkondenstaors mit dem Plattenabstand $d$ und der Plattenfläche $A$ berechnet sich nach der folgenden Formel:
+\begin{align}
+ C=\varepsilon_r\varepsilon_0\frac{A}{d}
+ \label{eq:C_Pl}
+\end{align}
+Dabei ist $\varepsilon_0$ die elektrische Feldkonstante und $\varepsilon_r$ die Permitivität des Mediums, welches sich zwischen den Platten befindet.
+Da unser Versuch in Luft stattfindet, wird im folgenden mit $\varepsilon_r=1$ gerechnet.\\
+Energie, die in einem Kondensator gespeichert ist:
+\begin{align}
+ W=\frac{1}{2} C U^2
+\end{align}
+Kraft, die zwischen den beiden Platten des Kondensators wirkt:
+\begin{align}
+ F=\varepsilon_0\frac{A U^2}{2 d^2}
+ \label{eq:F_Pl}
+\end{align}
+Bei der Kichhoffschen Potentialwaage wird diese Kraft mit der Gewichtskraft des Wägstückes $F_G$ gleichgesetzt:
+\begin{align}
+ \varepsilon_0\frac{A U^2}{2 d^2}=mg
+ \label{eq:PotWaage}
+\end{align}
 
 
 \section{Durchführung}
@@ -187,13 +208,73 @@ Praktikant:
 
 \section{Auswertung}
 \label{sec:auswertung}
+Bevor mit der eigentlichen Auswertung begonnen wird, berechnen wir die effektive Fläche $A$ des Kondensators, da hier die kapazitiven Effekte zwischen Ring und Platte beachtet werden müssen.
+Diese berechnet man nach der Formel aus dem Praktikumshandbuch:
+\begin{align*}
+ A=\pi (r^2+ra)
+\end{align*}
+Dabei ist $r=40\,$mm der Radius der oberen Platte ohne Schutzring und $a=1\,$mm die Breite des Schlitzes.
+So ergibt sich: $$A=5.152 \cdot 10^{-3}\,\si{\meter^2}$$
+Im folgenden wird mit einer Erdbeschleunigung von $g=9.81\,\si{\meter\per\second^2}$ gerechnet.
+
 \subsection{konstante Kraft}
+Aus Gleichung \eqref{eq:PotWaage} folgt eine lineare Abhängigkeit zwischen der Spannung $U$ und dem Plattenabstand $d$ für eine konstante Gewichtskraft, also wenn die Masse $m$ fest ist.
+\begin{align}
+ d= \sqrt{\frac{\varepsilon_0 A}{2mg}} \cdot U
+\end{align}
+In der nachfolgenden Abbildung \ref{fig:d(U)} ist diese Abhängigkeit dargestellt.
 \begin{figure}[!htb]
  \centering
  \input{messung1.tex}
  \caption{Plattenabstand in Abängigkeit der angelegten Spannung}
  \label{fig:d(U)}
 \end{figure}
+Aus der Geradensteigung $k$ lässt sich durch Umstellen der obigen Formel $\varepsilon_0$ berechnen:
+\begin{align*}
+ \varepsilon_0=\frac{2mg}{A}\cdot k^2
+\end{align*}
+
+Es ergeben sich diese Steigungen $k$ und die daraus resultierenden Werte für $\varepsilon_0$:
+\begin{table}[!htb]
+ \centering
+ \begin{tabular}{|c|c|c|}
+  \hline
+  $m~[\si{\gram}]$&  $k~\left[\si[per-mode=fraction]{\milli\meter\per\kilo\volt}\right]$ & $\varepsilon_0~\left[10^{-12}\,\si[per-mode=fraction]{\ampere\second\per\volt\per\meter}\right]$\\
+  \hline
+  $3$ & $0.739\pm 0.017$ & $6.24 \pm 0.29$\\
+  $4$ & $0.650\pm 0.007$ & $6.44 \pm 0.14$\\
+  \hline
+ \end{tabular}
+ \caption{Geradensteigung und daraus berechnete elektrische Feldkonstante}
+ \label{tab:messung1_k_epsilon0}
+\end{table}
+
+Es ergibt sich ein gewichteter Mittelwert von
+\begin{empheq}[box=\shadowbox*]{align*}
+  \overline{\varepsilon_0}=(6.40 \pm 0.13)\cdot 10^{-12}\,\si[per-mode=fraction]{\ampere\second\per\volt\per\meter}
+\end{empheq}
+
+Aus der linearen Regression folgt der Offset des Plattenabstandes als y-Achsenabschnitt:\\
+\begin{table}[!htb]
+ \centering
+ \begin{tabular}{|c|c|}
+  \hline
+  $m~[\si{\gram}]$&  $\Delta ~ [\si{\milli\meter}]$\\
+  \hline
+  $3$ & $-0.56 \pm 0.06$\\
+  $4$ & $0.650\pm 0.007$\\
+  \hline
+ \end{tabular}
+ \caption{Offset des Abstandes}
+ \label{tab:messung1_Delta}
+\end{table}
+
+Es ergibt sich ein gewichteter Mittelwert von
+\begin{empheq}[box=\shadowbox*]{align*}
+  \overline{\Delta}=(-0.595 \pm 0.022)\,\si{\milli\meter}
+\end{empheq}
+Für den wahren Plattenabstand $d_w$ muss also zum gemessenen Wert $d$ noch $\Delta$ addiert werden.
+
 \subsection{konstanter Plattenabstand}
 \begin{figure}[!htb]
  \centering
@@ -202,6 +283,23 @@ Praktikant:
  \label{fig:F(U^2)}
 \end{figure}
 
+\begin{align}
+ \varepsilon_0 &= k\cdot \frac{2d^2}{A}\\
+ \sigma_{\varepsilon_0} &= \sqrt{\sigma_k^2\cdot\left(\frac{2d^2}{A}\right)^2+\sigma_d^2\cdot\left(\frac{4dk}{A}\right)^2}
+\end{align}
+
+
+\begin{table}[!htb]
+ \centering
+ \begin{tabular}{|c|c|c|c|}
+  \hline
+  $d~[\si{\milli\meter}]$ &  $d_w ~ [\si{\milli\meter}]$ & $k$ [N/kV] & $\varepsilon_0 ~ \left[10^{-12}\,\si[per-mode=fraction]{\ampere\second\per\volt\per\meter}\right]$\\
+  \hline
+  \hline
+ \end{tabular}
+ \caption{...}
+ \label{tab:messung2}
+\end{table}
 
 
 \section{Diskussion}
