@@ -253,14 +253,14 @@ Es ergibt sich ein gewichteter Mittelwert von
   \overline{\varepsilon_0}=(6.40 \pm 0.13)\cdot 10^{-12}\,\si[per-mode=fraction]{\ampere\second\per\volt\per\meter}
 \end{empheq}
 
-Aus der linearen Regression folgt der Offset des Plattenabstandes als y-Achsenabschnitt:\\
+Aus der linearen Regression folgt der Offset des Plattenabstandes als das Negative des y-Achsenabschnittes:\\
 \begin{table}[!htb]
  \centering
  \begin{tabular}{|c|c|}
   \hline
   $m~[\si{\gram}]$&  $\Delta ~ [\si{\milli\meter}]$\\
   \hline
-  $3$ & $-0.56 \pm 0.06$\\
+  $3$ & $0.56 \pm 0.06$\\
   $4$ & $0.650\pm 0.007$\\
   \hline
  \end{tabular}
@@ -270,7 +270,7 @@ Aus der linearen Regression folgt der Offset des Plattenabstandes als y-Achsenab
 
 Es ergibt sich ein gewichteter Mittelwert von
 \begin{empheq}[box=\shadowbox*]{align*}
-  \overline{\Delta}=(-0.595 \pm 0.022)\,\si{\milli\meter}
+  \overline{\Delta}=(0.595 \pm 0.022)\,\si{\milli\meter}
 \end{empheq}
 Für den wahren Plattenabstand $d_w$ muss also zum gemessenen Wert $d$ noch $\Delta$ addiert werden.
 
@@ -283,22 +283,32 @@ Für den wahren Plattenabstand $d_w$ muss also zum gemessenen Wert $d$ noch $\De
 \end{figure}
 
 \begin{align}
- \varepsilon_0 &= k\cdot \frac{2d^2}{A}\\
- \sigma_{\varepsilon_0} &= \sqrt{\sigma_k^2\cdot\left(\frac{2d^2}{A}\right)^2+\sigma_d^2\cdot\left(\frac{4dk}{A}\right)^2}
+ \varepsilon_0 &= k\cdot \frac{2d_w^2}{A}\\
+ \sigma_{\varepsilon_0} &= \sqrt{\sigma_k^2\cdot\left(\frac{2d_w^2}{A}\right)^2+\sigma_{d_w}^2\cdot\left(\frac{4d_wk}{A}\right)^2}
 \end{align}
 
 
 \begin{table}[!htb]
- \centering
- \begin{tabular}{|c|c|c|c|}
-  \hline
-  $d~[\si{\milli\meter}]$ &  $d_w ~ [\si{\milli\meter}]$ & $k$ [N/kV] & $\varepsilon_0 ~ \left[10^{-12}\,\si[per-mode=fraction]{\ampere\second\per\volt\per\meter}\right]$\\
-  \hline
-  \hline
- \end{tabular}
- \caption{...}
- \label{tab:messung2}
+	\centering
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		$d~[\si{\milli\meter}]$ &  $d_w ~ [\si{\milli\meter}]$ & $k$ [N/(kV)$^2$] & $\varepsilon_0 ~ \left[10^{-12}\,\si[per-mode=fraction]{\ampere\second\per\volt\per\meter}\right]$\\
+		\hline
+		$2.000 \pm 0.010$ & $2.595 \pm 0.032$ & $0.00226 \pm 0.00005$ & $(5.92 \pm 0.19)$ \\
+		$2.500 \pm 0.010$ & $3.095 \pm 0.032$ & $0.001680 \pm 0.000026$ & $(6.25 \pm 0.16)$ \\
+		$3.000 \pm 0.010$ & $3.595 \pm 0.032$ & $0.001288 \pm 0.000022$ & $(6.46 \pm 0.16)$ \\
+		$4.000 \pm 0.010$ & $4.595 \pm 0.032$ & $0.000870 \pm 0.000022$ & $(7.13 \pm 0.21)$ \\  
+		\hline
+	\end{tabular}
+	\caption{Werte dieser Messung}
+	\label{tab:messung2}
 \end{table}
+
+Für $\varepsilon_0$ ergibt sich ein gewichteter Mittelwert von
+\begin{empheq}[box=\shadowbox*]{align*}
+  \overline{\varepsilon_0}=(6.40 \pm 0.09)\cdot 10^{-12}\,\si[per-mode=fraction]{\ampere\second\per\volt\per\meter}
+\end{empheq}
+
 
 
 \section{Diskussion}
