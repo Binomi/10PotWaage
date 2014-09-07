@@ -207,6 +207,27 @@ Bei der Kichhoffschen Potentialwaage wird diese Kraft mit der Gewichtskraft des 
 
 \section{Durchführung}
 \label{sec:durchfuehrung}
+\begin{figure}[!htb]
+	\centering	
+	\includegraphics[scale=0.7]{PotWaageSchema.png}
+	\caption{Schema der Potentialwaage: \small{\emph{1. Gewichtauflage; 2. obere Kondensatorplatte; 3. untere Kondensatorplatte; 4. Lot; 5. Arretierung; 6. Justierrad der unteren Kondensatorplatte; 7. Justierschrauben; 8. Holz-/Glas-Gehäuse}}\protect\footnotemark}
+	\label{fig:PotWaageSchema}
+\end{figure}
+\footnotetext{Quelle: https://lp.uni-goettingen.de/get/text/3664, abgerufen am 06.09.2014}
+
+Die Gewichte sollten nur mit einer Pinzette auf die Waage gelegt werden, da schon der kleinste Fettfleck ihre Masse beträchtlich ändern könnte und so die Messung verfälscht.
+Außerdem muss bei Betrieb der Waage, also angelegter Hochspannung, aus Sicherheitsgründen das Fenster geschlossen sein.\\
+
+\textbf{Messung 1:}
+Zuerst wird die Waage arretiert, um 3g auf die Waagschale zu legen.
+Dann wird eine Spannung $U$ (2, 3, 4, 5 kV) angelegt und die Arretierung gelöst.
+Sollte die Waage kippen, muss der Plattenabstand $d$ des Kondensators verkleinert werden.
+Anschließend wird der Plattenabstand vergrößert, bis die obere Kondensatorplatte abgehoben wird.
+Diesen Wert notiert man dann.
+All dies wird noch für eine aufgelegte Masse von $m=4$g wiederholt.\\  
+\textbf{Messung 2:}
+Nun wird der Plattenabstand auf $d=2, 2.5, 3, 4\,$mm fest eingestellt.
+Für mindestens 3 verschiedene Massen $1\,\text{g}\leq m \leq 4\,\text{g}$ wird durch Vermindern der angelegten Spannung $U$ die Spannung bestimmt, bei der die Waage kippt.
 
 \section{Auswertung}
 \label{sec:auswertung}
@@ -241,7 +262,7 @@ Es ergeben sich diese Steigungen $k$ und die daraus resultierenden Werte für $\
  \centering
  \begin{tabular}{|c|c|c|}
   \hline
-  $m~[\si{\gram}]$&  $k~\left[\si[per-mode=fraction]{\milli\meter\per\kilo\volt}\right]$ & $\varepsilon_0~\left[10^{-12}\,\si[per-mode=fraction]{\ampere\second\per\volt\per\meter}\right]$\\
+  \rule{0pt}{15pt}$m~[\si{\gram}]$&  $k~\left[\si[per-mode=fraction]{\milli\meter\per\kilo\volt}\right]$ & $\varepsilon_0~\left[10^{-12}\,\si[per-mode=fraction]{\ampere\second\per\volt\per\meter}\right]$\\
   \hline
   $3$ & $0.739\pm 0.017$ & $6.24 \pm 0.29$\\
   $4$ & $0.650\pm 0.007$ & $6.44 \pm 0.14$\\
@@ -261,7 +282,7 @@ Aus der linearen Regression folgt der Offset des Plattenabstandes als das Negati
  \centering
  \begin{tabular}{|c|c|}
   \hline
-  $m~[\si{\gram}]$&  $\Delta ~ [\si{\milli\meter}]$\\
+  \rule{0pt}{15pt}$m~[\si{\gram}]$&  $\Delta ~ [\si{\milli\meter}]$\\
   \hline
   $3$ & $0.56 \pm 0.06$\\
   $4$ & $0.650\pm 0.007$\\
@@ -295,12 +316,12 @@ Für den wahren Plattenabstand $d_w$ muss also zum gemessenen Wert $d$ noch $\De
 	\centering
 	\begin{tabular}{|c|c|c|c|}
 		\hline
-		$d~[\si{\milli\meter}]$ &  $d_w ~ [\si{\milli\meter}]$ & $k$ [N/(kV)$^2$] & $\varepsilon_0 ~ \left[10^{-12}\,\si[per-mode=fraction]{\ampere\second\per\volt\per\meter}\right]$\\
+		\rule{0pt}{15pt}$d~[\si{\milli\meter}]$ &  $d_w ~ [\si{\milli\meter}]$ & $k$ [N/(kV)$^2$] & $\varepsilon_0 ~ \left[10^{-12}\,\si[per-mode=fraction]{\ampere\second\per\volt\per\meter}\right]$\\
 		\hline
-		$2.000 \pm 0.010$ & $2.595 \pm 0.032$ & $0.00226 \pm 0.00005$ & $(5.92 \pm 0.19)$ \\
-		$2.500 \pm 0.010$ & $3.095 \pm 0.032$ & $0.001680 \pm 0.000026$ & $(6.25 \pm 0.16)$ \\
-		$3.000 \pm 0.010$ & $3.595 \pm 0.032$ & $0.001288 \pm 0.000022$ & $(6.46 \pm 0.16)$ \\
-		$4.000 \pm 0.010$ & $4.595 \pm 0.032$ & $0.000870 \pm 0.000022$ & $(7.13 \pm 0.21)$ \\  
+		$2.000 \pm 0.010$ & $2.595 \pm 0.032$ & $0.00226 \pm 0.00005$ & $5.92 \pm 0.19$ \\
+		$2.500 \pm 0.010$ & $3.095 \pm 0.032$ & $0.001680 \pm 0.000026$ & $6.25 \pm 0.16$ \\
+		$3.000 \pm 0.010$ & $3.595 \pm 0.032$ & $0.001288 \pm 0.000022$ & $6.46 \pm 0.16$ \\
+		$4.000 \pm 0.010$ & $4.595 \pm 0.032$ & $0.000870 \pm 0.000022$ & $7.13 \pm 0.21$ \\  
 		\hline
 	\end{tabular}
 	\caption{Werte dieser Messung}
