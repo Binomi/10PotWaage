@@ -179,7 +179,7 @@ Praktikant:
 In diesem Versuch soll die \textit{elektrische Feldkonstante} gemessen werden.
 Sie ist eine der wichtigsten Größen in der Elektrodynamik.
 Zur Messung verwenden wir die \textit{Kirchhoffsche Potentialwaage}.
-Hierbei werden die Kräfte, die zwischen den Platten eines Kondensators wirken.
+Hierbei werden die Kräfte ausgenutzt, die zwischen den Platten eines Kondensators wirken.
 
 \section{Theorie}
 \label{sec:theorie}
@@ -190,16 +190,18 @@ Die Kapazität eines Plattenkondenstaors mit dem Plattenabstand $d$ und der Plat
 \end{align}
 Dabei ist $\varepsilon_0$ die elektrische Feldkonstante und $\varepsilon_r$ die Permitivität des Mediums, welches sich zwischen den Platten befindet.
 Da unser Versuch in Luft stattfindet, wird im folgenden mit $\varepsilon_r=1$ gerechnet.\\
-Energie, die in einem Kondensator gespeichert ist:
+Um die Energie, die in einem Kondensator gespeichert ist, zu bestimmen, integriert man die Ladung $Q$ nach $\dif U$.
+Da $Q=C\cdot U$ gilt, erhält man:
 \begin{align}
  W=\frac{1}{2} C U^2
 \end{align}
-Kraft, die zwischen den beiden Platten des Kondensators wirkt:
+Da die Kraft $F$, die zwischen den beiden Platten des Kondensators wirkt, der Gradient der Energie ist, folgt mit \eqref{eq:C_Pl}:
+%Zwischenschritt
 \begin{align}
- F=\varepsilon_0\frac{A U^2}{2 d^2}
+ F=-\frac{\dif W}{\dif d}= -\frac{1}{2}\varepsilon_0\frac{\dif}{\dif d}\frac{A}{d} \;U^2 =\varepsilon_0\frac{A U^2}{2 d^2}
  \label{eq:F_Pl}
 \end{align}
-Bei der Kichhoffschen Potentialwaage wird diese Kraft mit der Gewichtskraft des Wägstückes $F_G$ gleichgesetzt:
+Bei der Kichhoffschen Potentialwaage wird diese Kraft mit der Gewichtskraft $F_G$ des Wägstückes gleichgesetzt (siehe Abschnitt \ref{sec:durchfuehrung}):
 \begin{align}
  \varepsilon_0\frac{A U^2}{2 d^2}=mg
  \label{eq:PotWaage}
@@ -334,9 +336,14 @@ Für $\varepsilon_0$ ergibt sich ein gewichteter Mittelwert von
 \end{empheq}
 
 
-
 \section{Diskussion}
 \label{sec:diskussion}
+Vergleicht man beide Werte für $\varepsilon_0$ untereinander, fällt auf, dass sie weniger als $1\%$ voneinander abweichen und der eine Wert im Fehlerintervall des jeweils anderen liegt.
+Verglichen mit dem Literaturwert $\varepsilon_0\approx 8.854\cdot 10^{-12}\,\si[per-mode=fraction]{\ampere\second\per\volt\per\meter}$ ergibt sich jedoch eine erhebliche Abweichung von mehr als $25\%$.
+Dies deutet also auf einen systematischen Fehler im Versuchsaufbau hin.
+
+
+Die Annahme $\varepsilon_r=1$ kann auch weiter verwendet werden, da für alle anderen Medien als Vakuum $\varepsilon_r$ größer ist und so der gemessene Wert für $\varepsilon_0$ größer sein müsste.
 
 \section{Anhang}
 
