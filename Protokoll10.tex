@@ -183,25 +183,26 @@ Hierbei werden die Kräfte ausgenutzt, die zwischen den Platten eines Kondensato
 
 \section{Theorie}
 \label{sec:theorie}
-Die Kapazität $C$ eines Plattenkondenstaors mit dem Plattenabstand $d$ und der Plattenfläche $A$ berechnet sich nach der folgenden Formel:
+Die Kapazität $C$ eines Plattenkondenstaors mit dem Plattenabstand $d$ und der Plattenfläche $A$ berechnet sich nach der folgenden Formel \cite[S.335]{gerthsen}
 \begin{align}
  C=\varepsilon_r\varepsilon_0\frac{A}{d}
  \label{eq:C_Pl}
 \end{align}
 Dabei ist $\varepsilon_0$ die elektrische Feldkonstante und $\varepsilon_r$ die Permitivität des Mediums, welches sich zwischen den Platten befindet.
+Mit diesem kann die Kapazität eines Kondensators beträchtlich erhöht werden.
+So hat Glas eine Dielektriztätskonstante $\varepsilon_r$, die zwischen 5 - 10 liegt \cite[S.335]{gerthsen}.
 Da unser Versuch in Luft stattfindet, wird im folgenden mit $\varepsilon_r=1$ gerechnet.\\
 Um die Energie, die in einem Kondensator gespeichert ist, zu bestimmen, integriert man die Ladung $Q$ nach $\dif U$.
 Da $Q=C\cdot U$ gilt, erhält man:
 \begin{align}
  W=\frac{1}{2} C U^2
 \end{align}
-Da die Kraft $F$, die zwischen den beiden Platten des Kondensators wirkt, der Gradient der Energie ist, folgt mit \eqref{eq:C_Pl}:
-%Zwischenschritt
+Da die Kraft $F$, die zwischen den beiden Platten des Kondensators wirkt, der negative Gradient der Energie ist, folgt mit \eqref{eq:C_Pl}:
 \begin{align}
  F=-\frac{\dif W}{\dif d}= -\frac{1}{2}\varepsilon_0\frac{\dif}{\dif d}\frac{A}{d} \;U^2 =\varepsilon_0\frac{A U^2}{2 d^2}
  \label{eq:F_Pl}
 \end{align}
-Im Gleichgewichtsfall der Kichhoffschen Potentialwaage wird diese Kraft mit der Gewichtskraft $F_G$ des Wägstückes gleichgesetzt (siehe Abschnitt \ref{sec:durchfuehrung}):
+Im Gleichgewichtsfall der Kichhoffschen Potentialwaage wird diese Kraft mit der Gewichtskraft $F_G$ des Wägstückes gleichgesetzt (siehe Abschnitt \ref{sec:durchfuehrung} sowie \cite[S.329 f.]{gerthsen}):
 \begin{align}
  \varepsilon_0\frac{A U^2}{2 d^2}=mg
  \label{eq:PotWaage}
@@ -216,12 +217,9 @@ Außerdem muss bei Betrieb der Waage, also angelegter Hochspannung, aus Sicherhe
 \begin{figure}[!htb]
 	\centering	
 	\includegraphics[scale=0.7]{PotWaageSchema.png}
-	\caption{Schema der Potentialwaage: \small{\emph{1. Gewichtauflage; 2. obere Kondensatorplatte; 3. untere Kondensatorplatte; 4. Lot; 5. Arretierung; 6. Justierrad der unteren Kondensatorplatte; 7. Justierschrauben; 8. Holz-/Glas-Gehäuse}}\protect\footnotemark}
+	\caption{Schema der Potentialwaage: \small{\emph{1. Gewichtauflage; 2. obere Kondensatorplatte; 3. untere Kondensatorplatte; 4. Lot; 5. Arretierung; 6. Justierrad der unteren Kondensatorplatte; 7. Justierschrauben; 8. Holz-/Glas-Gehäuse}} \cite[abgerufen am 06.09.2014]{LP10}}
 	\label{fig:PotWaageSchema}
 \end{figure}
-\footnotetext{Quelle: https://lp.uni-goettingen.de/get/text/3664, abgerufen am 06.09.2014}
-
-
 
 \textbf{Messung 1:}
 Zuerst wird die Waage arretiert, um 3g auf die Waagschale zu legen.
@@ -359,6 +357,7 @@ Die Annahme $\varepsilon_r=1$ kann auch weiterhin verwendet werden, da für alle
 Außerdem stellt man fest, dass die $\varepsilon_0$-Werte aus Tabelle \ref{tab:messung2} nicht nur sehr streuen, sondern auch mit zunehmendem Plattenabstand größer werden.
 Wir haben allerdings keine Erklärung für diesen merkwürdigen Zusammenhang.
 
-\section{Anhang}
+\bibliography{literatur}
+\bibliographystyle{babalpha}
 
 \end{document}
